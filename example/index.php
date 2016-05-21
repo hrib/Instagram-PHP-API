@@ -2,13 +2,13 @@
 
 require '../src/Instagram.php';
 
-use MetzWeb\Instagram\Instagram;
+//use MetzWeb\Instagram\Instagram;
 
 // initialize class
 $instagram = new Instagram(array(
-    'apiKey' => 'YOUR_APP_KEY',
-    'apiSecret' => 'YOUR_APP_SECRET',
-    'apiCallback' => 'YOUR_APP_CALLBACK' // must point to success.php
+    'apiKey' => 'cf2cd88',
+    'apiSecret' => 'cf2cd88a0b7745a4b4f8ac673190f659',
+    'apiCallback' => 'http://hrinstagram.herokuapp.com/example/success.php' // must point to success.php
 ));
 
 // create login URL
