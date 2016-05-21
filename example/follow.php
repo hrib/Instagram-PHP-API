@@ -1,7 +1,7 @@
 <?php
 
 require '../src/Instagram.php';
-use MetzWeb\Instagram\Instagram;
+//use MetzWeb\Instagram\Instagram;
 
 $instagram = new Instagram(array(
   'apiKey'      => 'YOUR_APP_KEY',
