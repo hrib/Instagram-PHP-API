@@ -6,7 +6,7 @@ require '../src/Instagram.php';
 
 // initialize class
 $instagram = new Instagram(array(
-    'apiKey' => 'cf2cd88',
+    'apiKey' => 'cf2cd88a0b7745a4b4f8ac673190f659',
     'apiSecret' => 'cf2cd88a0b7745a4b4f8ac673190f659',
     'apiCallback' => 'http://hrinstagram.herokuapp.com/example/success.php' // must point to success.php
 ));
