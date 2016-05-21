@@ -597,6 +597,7 @@ class Instagram
 
         // we want JSON
         $headerData = array('Accept: application/json');
+        echo '<br>api call1: '.$apiCall.'<br>';
 
         if ($this->_signedheader) {
             $apiCall .= (strstr($apiCall, '?') ? '&' : '?') . 'sig=' . $this->_signHeader($function, $authMethod, $params);
