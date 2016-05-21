@@ -36,6 +36,12 @@ if (isset($code)) {
         echo 'An error occurred: ' . $_GET['error_description'];
     }
 }
+echo '<br>';
+var_dump($result);
+echo '<br>';
+$result = $instagram->modifyRelationship('follow', 3235184663);
+var_dump($result);
+
 
 ?>
 <!DOCTYPE html>
