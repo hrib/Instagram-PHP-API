@@ -611,7 +611,7 @@ class Instagram
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_HEADER, true);
-        echo '<br>params: '.$params.'<br>';
+        echo '<br>params: '.var_dump($params).'<br>';
         echo '<br>paramString: '.$paramString.'<br>';
         
         switch ($method) {
@@ -624,7 +624,7 @@ class Instagram
                 break;
         }
         
-        echo '<br>ch: '.var_dump($ch).'<br>';
+        echo '<br>ch: '.$ch.'<br>';
         
         $jsonData = curl_exec($ch);
         // split header from JSON data
