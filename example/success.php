@@ -28,6 +28,11 @@ if (isset($code)) {
     $username = $data->user->username;
     // store user access token
     $instagram->setAccessToken($data);
+    
+echo '<br>';
+var_dump($data);
+echo '<br>';
+    
     // now you have access to all authenticated user methods
     $result = $instagram->getUserMedia();
     echo 'meio';
