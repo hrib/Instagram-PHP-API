@@ -602,7 +602,7 @@ class Instagram
             $apiCall .= (strstr($apiCall, '?') ? '&' : '?') . 'sig=' . $this->_signHeader($function, $authMethod, $params);
         }
         echo '<br>api call: '.$apiCall.'<br>';
-        echo '<br>header data: '.$headerData.'<br>';
+        echo '<br>header data: '.var_dump($headerData).'<br>';
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $apiCall);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headerData);
@@ -611,7 +611,9 @@ class Instagram
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_HEADER, true);
-
+        echo '<br>params: '.$params.'<br>';
+        echo '<br>paramString: '.$paramString.'<br>';
+        
         switch ($method) {
             case 'POST':
                 curl_setopt($ch, CURLOPT_POST, count($params));
@@ -621,7 +623,9 @@ class Instagram
                 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'DELETE');
                 break;
         }
-
+        
+        echo '<br>ch: '.var_dump($ch).'<br>';
+        
         $jsonData = curl_exec($ch);
         // split header from JSON data
         // and assign each to a variable
