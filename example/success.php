@@ -38,7 +38,7 @@ if (isset($code)) {
     }
 }
 echo '<br>';
-$result = $instagram->modifyRelationship('follow', 3235184663);
+$result = $instagram->modifyRelationship('follow', '3235184663');
 var_dump($result);
 echo '<br>';
 
