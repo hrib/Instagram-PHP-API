@@ -20,7 +20,7 @@ $instagram = new Instagram(array(
 
 // receive OAuth code parameter
 $code = $_GET['code'];
-echo $code;
+
 // check whether the user has granted access
 if (isset($code)) {
     // receive OAuth token object
@@ -28,11 +28,6 @@ if (isset($code)) {
     $username = $data->user->username;
     // store user access token
     $instagram->setAccessToken($data);
-    
-echo '<br>';
-var_dump($data);
-echo '<br>';
-    
     // now you have access to all authenticated user methods
     $result = $instagram->getUserMedia();
     echo 'meio';
@@ -43,10 +38,9 @@ echo '<br>';
     }
 }
 echo '<br>';
+$result = $instagram->modifyRelationship('follow', 3235184663);
 var_dump($result);
 echo '<br>';
-//$result = $instagram->modifyRelationship('follow', 3235184663);
-//var_dump($result);
 
 
 ?>
