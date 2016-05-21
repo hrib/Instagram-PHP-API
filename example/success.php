@@ -20,7 +20,7 @@ $instagram = new Instagram(array(
 
 // receive OAuth code parameter
 $code = $_GET['code'];
-
+echo $code;
 // check whether the user has granted access
 if (isset($code)) {
     // receive OAuth token object
