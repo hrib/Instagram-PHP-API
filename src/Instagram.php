@@ -555,7 +555,7 @@ class Instagram
             'redirect_uri' => $this->getApiCallback(),
             'code' => $code
         );
-
+        echo var_dump($apiData);
         $result = $this->_makeOAuthCall($apiData);
 
         return !$token ? $result : $result->access_token;
