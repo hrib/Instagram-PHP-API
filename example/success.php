@@ -30,6 +30,7 @@ if (isset($code)) {
     $instagram->setAccessToken($data);
     // now you have access to all authenticated user methods
     $result = $instagram->getUserMedia();
+    echo 'meio';
 } else {
     // check whether an error occurred
     if (isset($_GET['error'])) {
@@ -39,8 +40,8 @@ if (isset($code)) {
 echo '<br>';
 var_dump($result);
 echo '<br>';
-$result = $instagram->modifyRelationship('follow', 3235184663);
-var_dump($result);
+//$result = $instagram->modifyRelationship('follow', 3235184663);
+//var_dump($result);
 
 
 ?>
