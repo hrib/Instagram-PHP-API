@@ -6,16 +6,20 @@ require '../src/Instagram.php';
 $instagram = new Instagram(array(
     'apiKey' => getenv('INS_APP_XMASS_ID'),
     'apiSecret' => getenv('INS_APP_XMASS_SEC'),
-    'apiCallback' => 'http://hrinstagram.herokuapp.com/example/success.php' // must point to success.php
+    'apiCallback' => 'zzzzzzzzzzzzzzzzzzzzhttp://hrinstagram.herokuapp.com/example/success.php' // must point to success.php
 ));
 
-$loginUrl = $instagram->getLoginUrl(array('basic','relationships'));
+//$loginUrl = $instagram->getLoginUrl(array('basic','relationships'));
 
 
 // set user's accesstoken (can be received after authentication)
-$instagram->setAccessToken("xxx2105655638.cf2cd88.244f31b9283d43488b0852b6479d7398");
+
+$token = getenv('INS_APP_TOKEN');
+$id_to_get_followers = '327771661';
+$instagram->setAccessToken($token);
 // follow user (snoopdogg)
-$result = $instagram->modifyRelationship('follow', 3235184663);
+$result = $instagram->getUserFollower($id_to_get_followers, 10);
+var_dump($result);
 // receive the list of users this user follows
 //$follows = $instagram->getUserFollows();
 // dump response object
