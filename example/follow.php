@@ -1,6 +1,7 @@
 <?php
 
 require '../src/Instagram.php';
+require '../src/InstagramException.php';
 //use MetzWeb\Instagram\Instagram;
 
 $instagram = new Instagram(array(
